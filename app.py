@@ -30,6 +30,7 @@ def adicionar_usuario():
 
 # Rota PUT - atualizar um usuário
 @app.route("/usuarios/<int:id>", methods=["PUT"])
+
 def atualizar_usuario(id):
     dados = request.get_json()
     for usuario in usuarios:
@@ -50,5 +51,3 @@ def remover_usuario(id):
 # Inicia a API
 if __name__ == "__main__":
     app.run(debug=True)
-
-
